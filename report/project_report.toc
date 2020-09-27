@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {I}Introduction}{2}%
+\contentsline {section}{\numberline {II}Behaviour of Loopback mode}{2}%
+\contentsline {section}{\numberline {III}Implementation of detector}{2}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}Hardware Setup}{2}%
+\contentsline {subsection}{\numberline {\mbox {III-B}}Software}{3}%
+\contentsline {subsection}{\numberline {\mbox {III-C}}Experimental Results}{3}%
+\contentsline {section}{\numberline {IV}Challenges of range detection with Loopback Mode}{3}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Limitations of PlutoSDR and Python}{3}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}Passive radar as alternative}{3}%
+\contentsline {section}{\numberline {V}Conclusion}{3}%
+\contentsline {section}{References}{3}%
