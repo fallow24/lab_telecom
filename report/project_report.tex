@@ -137,9 +137,9 @@ The example shows that the transmitted signal (for example, received by an other
 \label{sec:implDetector}
 The behavior described in section \ref{sec:behaviourLoopback} is now used to implement a simple detector. The goal is figure out if an AdalmPluto SDR with a specific known loopback local oscillator is in close proximity of another AdalmPluto SDR . 
 This is done in two different ways.
-The first approach is by only comparing a threshold gain.
+The first approach is by only comparing a threshold gain at a given frequency.
 The idea is that a specific gain threshold is undercut at a certain distance.
-The second one is by calculating the correlation between the received and sent signal.
+The second one is by calculating the correlation of a given frequency spectrum between the received and sent signal .
 The idea is to detect the exact moment of signal loss using correlation, then reconstructing the distance using time measurements.
 
 
