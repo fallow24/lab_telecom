@@ -1,5 +1,3 @@
-
-
 \documentclass[journal]{IEEEtran}
 
 
@@ -32,7 +30,7 @@
 \begin{document}
 
 
-\title{Evaluation of the loopback mode of the Adlam Pluto with regard to simple detection and radar tasks }
+\title{Evaluation of the loopback mode of the Adlam Pluto with regard to simple detection and RADAR tasks }
 
 
 \author{Fabian Arzberger,
@@ -55,7 +53,7 @@
 The loopback mode of the Software Defined Radio (SDR) Adlam Pluto feeds the incoming received RF signals directly to the transmit port, bypassing the internal FPGA structure.
 %  Source: https://de.mathworks.com/help/supportpkg/plutoradio/ref/comm.sdrtxpluto-system-object.html#bvn_isv-1_sep_mw_2858fe15-bb5b-4eca-9706-1bca447fac05
 In this report, two SDRs are used where one of which is in loopback mode to implement a simple detection of the loopback device.
-The implementation of a radar with this setup shows limitations in terms of hardware and software - Python specifically.
+The implementation of a RADAR with this setup shows limitations in terms of hardware and software - Python specifically.
 Furthermore, the role of the loopback mode regarding these limitations is discussed.
 \end{abstract}
 
@@ -68,7 +66,7 @@ Furthermore, the role of the loopback mode regarding these limitations is discus
 \label{sec:introduction}
 
 \IEEEPARstart{S}{oftware} Defined Radios (SDRs) open the expensive and complex traditional field of radios for a wide range of users with smaller budget by replacing the unflexible harware-bound components by software. That way, a SDR enables flexible and easy to use changes of the emulated components like mixers, amplifiers, filters, etc. The Adlam Pluto is such a SDR. It is specialized for education and covers a frequency range of 325 MHz to 3.8 GHz with an instantaneous bandwidth up of up to 20 MHz and a 12-bit analog-digital / digital-analog-converter. 
-The Pluto has two loopback modes. The digital-TX-to-RX and analog-RX-to-TX mode. The first mode interprets the digital, pure signal which should have theoretically been sent and uses it as the input signal. It is the digital version of connecting the Rx output to the TX input with a cable, but without any distortion or perturbations due to environment and/or hardware. Therefore, this mode has a primary educational use or is used for internal testing. 
+The Pluto has two loopback modes. The digital-TX-to-RX and analog-RX-to-TX mode. The first mode interprets the digital, pure signal which should have theoretically been sent and uses it as the input signal. It is the digital version of connecting the RX output to the TX input with a cable, but without any distortion or perturbations due to environment and/or hardware. Therefore, this mode has a primary educational use or is used for internal testing. 
 The second, analog loopback mode takes the received signal and leads it to the transmitter. Section \ref{sec:behaviourLoopback} shows the exact behavior of the second loopback mode. 
 As exemplary practical use, the implementation of detection of a specifically initialized PluoSDR in analog loopback mode is shown. Furthermore, the limitations of it with regard to the realization of distance measurements with the use of this mode are discussed.
 
@@ -83,13 +81,13 @@ The received signal, that is the center frequency plus the around liyng spectrum
 \begin{figure}
 \centering
 \begin{subfigure}[b]{0.45\textwidth}
-   \includegraphics[width=1\linewidth, height=5cm]{fig/bandwidth_15MHz.PNG}
+   \includegraphics[width=1\linewidth, height=4.5cm]{fig/bandwidth_15MHz.PNG}
    \caption{}
    \label{fig:bw1} 
 \end{subfigure}
 
 \begin{subfigure}[b]{0.45\textwidth}
-   \includegraphics[width=1\linewidth, height=5cm]{fig/bandwidth_3MHz.PNG}
+   \includegraphics[width=1\linewidth, height=4.5cm]{fig/bandwidth_3MHz.PNG}
    \caption{}
    \label{fig:bw2}
 \end{subfigure}
@@ -217,8 +215,7 @@ For further information please refer to the Python scripts that can be found on 
 \end{figure}
 
 Figure \ref{fig:lnear} to \ref{fig:lnosig} show the transmitted and received signal in different distances as well as the received signal when no signal is transmitted.
-As can be seen, a detection of only up to one meter seems feasible for the detection using the amplitude approach. 
-Using the correlation method, the other pluto can be detected in a range of about 20 m.
+As can be seen, a detection of approximatly up to 20 meters seems feasible for the detection. 
 Furthermore, a significant letdown is experienced using the loopback mode:
 Sometimes setting up the analog loopback modes resets the other components of the AdlamPluto, which makes it not usable for more than experimental results. Also the loopback mode itself is disabled, without any instruction at all by the user.
 However, this was not tested using yet another SDR, so theoretically it could just be due to a bug corresponding to the SDRs used in this report specifically. 
@@ -253,7 +250,8 @@ First of all, when using Python, the .tx( \textit{signal} ) function for writing
 
 Furthermore, the function time is not constant for a given signal but rather has a wide variance in duration which can be seen in figure \ref{fig:pytimes}.
 Also, its not clear if the transmission starts or ends with that statement (or even something in between).
-The time range between the shortest and longest tx()-function is $0.034s-0.005=0.029s$,  correspondents to a travel distance of 8700km,  therefore a detected range difference of 4350km. Even the variance of the data corresponds to a distance variance of approximately 15 km, which makes an exact range measurement impossible, especially when our range of detection is limited by the approximately 50meter, after which no signal is received.
+The time range between the shortest and longest tx()-function is $0.034 s-0.005=0.029 s$,  corresponding to a travel distance of 8700 km leading to a detected range difference of 4350 km.
+Even the variance of the data corresponds to a distance variance of approximately 15 km, which makes an exact range measurement impossible, especially when our range of detection is limited by the approximately 50 meters, after which no signal is received.
 One idea to avoid the dependence on this vague time would be to use such a short signal that when the receiver is started we capture the original transmitted signal first, then nothing, and finally the loopbacked  signal all in one buffer.
 There are several problems with this method.
 First of all, such a short signal is not enough to generate a noticeable peak at the AdalmPluto.
@@ -279,11 +277,23 @@ Since the passive radar approach only relies on the received signal and not on a
 
 \subsection{Amplitude approach as alternative}
 \label{sec:Alternatives2}
-Also not with the necessity of the Loopback-mode, but with the necessity of a second PlutoSDR, is the amplitude approach. The basic idea is to correlate the amplitude of the signal with a distance. The pluto, which would have to be detected, sends a signal at a specific power. Sending with maximum power is not necessarily the best solution, because the receiving Pluto would receive a Signal at zero dB for minimal distances. Therefore a working range has to be defined. Of course, any other Signal at this frequency would lead to false detection. Although we don't focus on the aspect of security by hackers, the possibility of a frequency at that range is given by the environment. Therefore a modulation or code should be sent as confirmation. 
-The loopback mode could be used for this approach, as seen in figure \ref{fig:lnear} this would be possible. The pure amplitude approach just by one signal still leaves the possibility for false detection of other signals. Therefore, again a modulation of the signal would be required. 
-Therefore the use of Loopback-mode has no advantage over the use of direct communication. Empirical results show that loopback mode does not work well with small amplitudes, meaning that the loopback device receives at a far distance a minimum, but visible signal, but the received signal of the loopback does not show the minimal peak anymore. Therefore an active sending signal would provide a better range.
+Another approach that does require a second SDR but not necesseraly the loopback mode is to use the amplitude of the received signal only to determine the distance between the two SDRs.
+The basic idea is to associate the amplitude of the signal with a carefully selected distance.
+The AdalmPluto which has to be detected sends a signal at a given power. 
+Sending with maximum power is not necessarily the best solution, because the receiving SDR would receive a signal at zero dB for minimal distances. 
+Therefore, a working range has to be defined.
+Obviously, if there was any other signal at this frequency it would distort the result, making it completly unusable.
+Although we do not focus on the aspect of security by hackers, there is still the possibility of a frequency at that range given by the environment.
+Therefore, if using the amplitude approach, a modulation or code should be sent as confirmation. 
+Section \ref{subsec:experimental_results} shows that the loopback mode could be used for this approach, as seen in figure \ref{fig:lnear}.
+However, a modulation of the signal would still be required. 
+Furthermore, the use of the loopback mode has no advantage over the use of direct communication.
+Empirical results show that the loopback mode does not work well with small received amplitudes.
+That means that the loopback device receives a small yet visible peak (e.g a peak like in figure \ref{fig:l50far}) from a signal far away, but the loopbacked signal does not seem to transmit this small peak anymore.
+Therefore, an active sending signal without loopback would provide a better range.
 All these approaches are very sensitive to any sort of disturbance or attenuation of the signal like walls or other obstacles, which are not a big problem for the time measurement approach, as long as a minimal signal is received.
-There was no implementation of this approach because this work laid on time measuring approach for radar, which would be better than a pure amplitude approach if it would be realizable. 
+Since the goal of this report was to evaluate RADAR tasks based on time measurements, an implementation of the amplitude-distance approach was skipped.   
+If a time based approach could be realized it would be more reliable than a pure amplitude approach. 
 
 
 \section{Conclusion}
@@ -303,5 +313,3 @@ The passive radar and teh amplitude approach were introduced as working alternat
 \bibliography{bibliography/IEEEabrv,bibliography/bibliography.bib}
 
 \end{document}
-
-

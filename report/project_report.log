@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.31)  27 SEP 2020 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.18)  28 SEP 2020 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -189,20 +189,20 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 (./project_report.aux)
 \openout1 = `project_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 -- Lines per column: 58 (exact).
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -232,13 +232,13 @@ Package caption Info: End \AtBeginDocument code.
 <fig/bandwidth_15MHz.PNG, id=1, 511.15968pt x 438.13687pt>
 File: fig/bandwidth_15MHz.PNG Graphic file (type png)
 <use fig/bandwidth_15MHz.PNG>
-Package pdftex.def Info: fig/bandwidth_15MHz.PNG  used on input line 86.
-(pdftex.def)             Requested size: 232.19583pt x 142.26576pt.
+Package pdftex.def Info: fig/bandwidth_15MHz.PNG  used on input line 84.
+(pdftex.def)             Requested size: 232.19583pt x 128.03918pt.
 <fig/bandwidth_3MHz.PNG, id=3, 511.15968pt x 436.63126pt>
 File: fig/bandwidth_3MHz.PNG Graphic file (type png)
 <use fig/bandwidth_3MHz.PNG>
-Package pdftex.def Info: fig/bandwidth_3MHz.PNG  used on input line 92.
-(pdftex.def)             Requested size: 232.19583pt x 142.26324pt.
+Package pdftex.def Info: fig/bandwidth_3MHz.PNG  used on input line 90.
+(pdftex.def)             Requested size: 232.19583pt x 128.03226pt.
 
 [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -247,57 +247,57 @@ Package pdftex.def Info: fig/bandwidth_3MHz.PNG  used on input line 92.
 <fig/echoing.PNG, id=15, 510.40688pt x 435.12563pt>
 File: fig/echoing.PNG Graphic file (type png)
 <use fig/echoing.PNG>
-Package pdftex.def Info: fig/echoing.PNG  used on input line 112.
+Package pdftex.def Info: fig/echoing.PNG  used on input line 110.
 (pdftex.def)             Requested size: 252.00186pt x 170.72078pt.
 <fig/example_loopback.PNG, id=16, 512.66531pt x 399.74344pt>
 File: fig/example_loopback.PNG Graphic file (type png)
 <use fig/example_loopback.PNG>
-Package pdftex.def Info: fig/example_loopback.PNG  used on input line 124.
+Package pdftex.def Info: fig/example_loopback.PNG  used on input line 122.
 (pdftex.def)             Requested size: 251.99828pt x 170.7152pt.
 <fig/loopback_near.PNG, id=17, 507.39563pt x 398.61421pt>
 File: fig/loopback_near.PNG Graphic file (type png)
 <use fig/loopback_near.PNG>
-Package pdftex.def Info: fig/loopback_near.PNG  used on input line 187.
+Package pdftex.def Info: fig/loopback_near.PNG  used on input line 185.
 (pdftex.def)             Requested size: 232.19704pt x 113.80695pt.
 <fig/loopback_far.PNG, id=18, 510.78328pt x 396.7322pt>
 File: fig/loopback_far.PNG Graphic file (type png)
 <use fig/loopback_far.PNG>
-Package pdftex.def Info: fig/loopback_far.PNG  used on input line 193.
+Package pdftex.def Info: fig/loopback_far.PNG  used on input line 191.
 (pdftex.def)             Requested size: 232.19632pt x 113.80838pt.
 <fig/loopback_18m_far.PNG, id=19, 508.90125pt x 397.1086pt>
 File: fig/loopback_18m_far.PNG Graphic file (type png)
 <use fig/loopback_18m_far.PNG>
-Package pdftex.def Info: fig/loopback_18m_far.PNG  used on input line 199.
+Package pdftex.def Info: fig/loopback_18m_far.PNG  used on input line 197.
 (pdftex.def)             Requested size: 232.19495pt x 113.8073pt.
 <fig/loopback_50m_far.PNG, id=20, 509.27765pt x 394.85016pt>
 File: fig/loopback_50m_far.PNG Graphic file (type png)
 <use fig/loopback_50m_far.PNG>
-Package pdftex.def Info: fig/loopback_50m_far.PNG  used on input line 205.
+Package pdftex.def Info: fig/loopback_50m_far.PNG  used on input line 203.
 (pdftex.def)             Requested size: 232.19571pt x 113.81075pt.
 <fig/loopback_nosignal.PNG, id=21, 507.77203pt x 398.61421pt>
 File: fig/loopback_nosignal.PNG Graphic file (type png)
 <use fig/loopback_nosignal.PNG>
-Package pdftex.def Info: fig/loopback_nosignal.PNG  used on input line 211.
+Package pdftex.def Info: fig/loopback_nosignal.PNG  used on input line 209.
 (pdftex.def)             Requested size: 232.19882pt x 113.80695pt.
  [2 <./fig/echoing.PNG> <./fig/example_loopback.PNG>]
 <fig/periods_block.png, id=27, 543.02875pt x 261.97874pt>
 File: fig/periods_block.png Graphic file (type png)
 <use fig/periods_block.png>
-Package pdftex.def Info: fig/periods_block.png  used on input line 232.
+Package pdftex.def Info: fig/periods_block.png  used on input line 229.
 (pdftex.def)             Requested size: 252.0003pt x 113.80792pt.
 <fig/python_tx_var.png, id=28, 462.528pt x 346.896pt>
 File: fig/python_tx_var.png Graphic file (type png)
 <use fig/python_tx_var.png>
-Package pdftex.def Info: fig/python_tx_var.png  used on input line 249.
+Package pdftex.def Info: fig/python_tx_var.png  used on input line 246.
 (pdftex.def)             Requested size: 252.0057pt x 213.39534pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 256.
+(Font)              <7> on input line 253.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 256.
+(Font)              <5> on input line 253.
 [3 <./fig/loopback_near.PNG> <./fig/loopback_far.PNG> <./fig/loopback_18m_far.P
 NG> <./fig/loopback_50m_far.PNG> <./fig/loopback_nosignal.PNG> <./fig/periods_b
 lock.png>] (./project_report.bbl
@@ -305,16 +305,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 27.
-) [4 <./fig/python_tx_var.png>]
+ [4 <./fig/python_tx_var.png>]) [5
+
+]
 (./project_report.aux) ) 
 Here is how much of TeX's memory you used:
  3328 strings out of 480608
  58083 string characters out of 5903630
- 303486 words of memory out of 5000000
+ 302486 words of memory out of 5000000
  19214 multiletter control sequences out of 15000+600000
  568965 words of font info for 84 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 48i,7n,46p,770b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,7n,46p,598b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/bas
 e/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
 i10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
@@ -323,10 +325,10 @@ i10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 /local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/te
 xlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project_report.pdf (4 pages, 241918 bytes).
+Output written on project_report.pdf (5 pages, 242441 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
