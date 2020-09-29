@@ -280,9 +280,10 @@ Since the passive radar approach only relies on the received signal and not on a
 Another approach that does require a second SDR but not necesseraly the loopback mode is to use the amplitude of the received signal only to determine the distance between the two SDRs.
 The basic idea is to associate the amplitude of the signal with a carefully selected distance.
 The AdalmPluto which has to be detected sends a signal at a given power. 
-Sending with maximum power is not necessarily the best solution, because the receiving SDR would receive a signal at zero dB for minimal distances. 
+Sending with maximum power is not necessarily the best solution, because the receiving SDR would receive a signal at zero dB for a wider range of minimal distances.
+Sending with less power solves that problem but also decreases the maximum measureable range.
 Therefore, a working range has to be defined.
-Obviously, if there was any other signal at this frequency it would distort the result, making it completly unusable.
+Obviously, if there was any other signal at the working frequency it would distort the result, making it completly unusable.
 Although we do not focus on the aspect of security by hackers, there is still the possibility of a frequency at that range given by the environment.
 Therefore, if using the amplitude approach, a modulation or code should be sent as confirmation. 
 Section \ref{subsec:experimental_results} shows that the loopback mode could be used for this approach, as seen in figure \ref{fig:lnear}.
@@ -301,7 +302,7 @@ If a time based approach could be realized it would be more reliable than a pure
 The behavior of the loopback mode was analyzed.
 We implemented the detection of an AdalmPluto SDR in loopback mode in two ways.
 Any usefull distance measurements are not possible due to the practical limitations of Python and the AdlamPluto.
-The passive radar and teh amplitude approach were introduced as working alternatives due to its independence to the described limitations. 
+The passive RADAR and the amplitude approach were introduced as working alternatives due to their independence to the described limitations. 
 
 
 
